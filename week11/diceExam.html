@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+            margin: auto;
+        }
+
+
+        #dice{
+            margin: 10px;
+            font-size: 2em;
+        }
+        
+        .Btn{
+            background-color: skyblue;
+            color: white;
+            padding: 10px 15px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            transition : background-color 0.3s ease-in;
+            cursor: pointer;
+        }   
+        .Btn:hover{
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div id="dice">🎲</div>
+
+        <button class="Btn" onclick="clickDice()">클릭~</button>
+
+    </div>
+
+
+
+    <script>
+        let dice = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+
+
+        function clickDice(){
+
+            const red = Math.floor(Math.random()*256);
+            const green = Math.floor(Math.random()*256);
+            const blue = Math.floor(Math.random()*256);
+
+            const randomColor = `rgb(${red}, ${green}, ${blue})`;
+
+            document.querySelector('.Btn').style.backgroundColor=randomColor;
+
+            let idx = Math.floor(Math.random()*6);
+        
+            const origin = document.getElementById("dice");
+            origin.textContent = dice[idx];
+        }
+
+        
+//호이스팅 주관식 나옴 
+//  class = queryselector , id = getElementById
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //°´Ã¼ ¸®ÅÍ·²(Object Literal) : {}¸¦ »ç¿ëÇØ¼­ °´Ã¼ ¼±¾ð.
+        const person = {
+            name : "Hong",
+            hobbies : ["music", "soccer", "movie"],
+            info(){
+                return `hello, my name is ${this.name} and my hobbies are ${this.hobbies.join(",")}.`
+            }
+
+        };
+        console.log(person.name);
+        console.log(person.hobbies);
+        console.log(person.info());
+
+    </script>
+
+
+    
+</body>
+</html>

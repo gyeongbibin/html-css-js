@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //대괄호로 객체 내용 생성
+        const person = {}
+        person['name'] = "홍길동";
+        person['age'] = 30;
+        person['say'] =function(){
+            document.write("say hello")
+        }
+
+        //?로 속성이 존재하는지 확인
+        const person1 = {
+            name:"홍길동"
+        }
+        document.write(person1?.name);
+    </script>
+</body>
+</html>

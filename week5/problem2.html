@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p:nth-child(3){
+            color: red;
+        }
+
+        p:nth-last-child(2){
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--nth-child, nth-last-child-->
+
+    <p>programming</p>
+    <div>
+        <p>html</p>     
+        <span>css</span>
+        <p>javascript</p> <!--red-->
+    </div>
+    <p>programming2</p> <!--red-->
+    <div>
+        <p>html</p>
+        <p>css</p> <!--blue-->
+        <span>javascript</span>
+    </div>
+    <p>programming3</p> <!--blue-->
+    <p>programming4</p>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="openGoogle">Open google</button>
+    <button id="scrollBtn">Scroll 500px bellow</button>
+    <a href="hello.html">hello</a>
+    
+    <script>
+        // if(window.confirm("Would you like to move to google?")){
+        //     window.location.href = "https://www.google.com"
+        // }
+
+
+        // "_blank" : 새창에서 열기.
+        document.querySelector("#openGoogle").addEventListener("click",
+            ()=> {window.open("https://www.google.com","_blank")});
+
+        window.addEventListener("resize", 
+            () => {console.log(`window size change, width : ${window.innerWidth}px, height : ${innerHeight}px` )}
+        );
+
+        document.querySelector("#scrollBtn").addEventListener("click",
+            ()=>{window.scrollTo(0, 500);}
+        );
+
+        //데이터 저장
+
+        localStorage.setItem("username", "Hong-gildong");
+
+        //데이터 읽기
+        const savedName = localStorage.getItem("username");   
+        console.log(savedName);
+
+        //데이터 삭제
+        localStorage.removeItem("username");
+        console.log(localStorage.getItem("username"));
+
+
+
+    </script>
+    
+</body>
+</html>

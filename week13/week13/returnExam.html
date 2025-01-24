@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function getNumber(numbers){
+            const min = Math.min(...numbers);
+            const max = Math.max(...numbers);
+            return [min,max];
+        }
+        const [min, max]= getNumber([5,4,10,2,1]);
+        document.write(min + "<br>")
+        document.write(max)
+
+
+        function user(){
+            return{
+                name : "Hong",
+                age : 30,
+                location : "Seoul"
+            };
+        };
+        const userinfo = user();
+        document.write(userinfo)
+
+
+
+
+    </script>
+</body>
+</html>

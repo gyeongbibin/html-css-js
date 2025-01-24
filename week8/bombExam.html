@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .bomb{
+            animation: bombexam  5s ease;
+            font-size: 12px;
+            transition: all 10s ease-in;
+        }
+
+      @keyframes  bombexam {
+        from{
+            font-size: 100%;
+        }
+        to{ font-size: 500%;}
+        
+      }
+
+      .bomb:active{
+        margin-left: 500px;
+        margin-top: 500px;
+        
+
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="bomb">
+        BOMB!
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid orange;
+            background-color: orange;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+
+    </div>
+
+    <script>
+        function changeColor(){
+        const box = document.querySelector(".box");
+        const red = Math.floor(Math.random*256);
+        const blue = Math.floor(Math.random*256);
+        const green = Math.floor(Math.random*256);
+
+        const randomColor = `rgb{${red}, ${blue} ,${green}}`
+            box.style.backgroundColor = randomColor;
+    }   setInterval(changeColor(),5000);
+        setTimeout(clearInterval(setInterval),15000)
+    </script>
+</body>
+</html>

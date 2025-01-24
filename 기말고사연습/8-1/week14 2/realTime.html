@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="example">
+        <div class="child">item1</div>
+        <div class="child">item2</div>
+    </div>
+    <div class="example">
+        <p>item3</p>
+    </div>
+    <button id="countBtn">Count</button>
+    <p>getCount : <span id="getCount">0</span></p>
+    <p>queCount : <span id="queCount">0</span></p>
+
+    <script>
+
+        const getCount = document.getElementsByClassName("child");
+
+        const queCount = document.querySelectorAll(".child");
+
+        //초기 카운트 설정 : child 요소가 두개 이므로 2가 들어감
+        document.getElementById("getCount").textContent = getCount.length;
+        document.getElementById("queCount").textContent = queCount.length;
+
+        
+        //count 버튼 이벤트 처리
+        document.getElementById("countBtn").addEventListener("click", () =>
+            {
+                document.getElementById("getCount").textContent = getCount.length;
+                document.getElementById("queCount").textContent = queCount.length;
+            }
+        );
+        
+        //child 요소를 추가. --> 클래스 추가( 실시간 테스트용)
+        document.body.classList.add("child");
+        
+
+        // getElementsByClassName은 실시간 반영이 되지만, querySelectorAll은 실시간 반영이 안됨.
+
+
+    </script>
+</body>
+</html>

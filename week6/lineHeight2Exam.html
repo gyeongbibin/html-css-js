@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        
+        .normal{
+            font-size: 10px;
+            line-height: 1.5rem; 
+        }
+
+        .large-text{
+            font-size: 24px;
+            line-height: 2rem;
+        }
+
+        .custom-root{
+            font-size: 20px;
+        }
+        .custom-root>.rem-based{
+            font-size: 17px;
+            line-height: 2rem;   
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <p class="normal">16px*1.5</p>
+    <p class="large-text">root font*2</p>
+    <div class="custom-root">
+        <p class="rem-based">16px*2</p>
+    </div>
+
+    
+</body>
+</html>

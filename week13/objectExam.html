@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const Savings = {
+        name : "홍길동" , 
+        balance : 1000 ,
+        deposit(amount){
+            this.balance+=amount;
+            return `${this.name} 님이 ${amount}를 입금했습니다. 현재 잔액은 ${this.balance} 입니다.`
+        },
+        withdraw(amount){
+            if(this.balance>amount){
+                this.balance -= amount;
+                return `${this.name} 님이 ${amount}를 출금하여 잔액은 ${this.balance} 입니다`
+            }
+            else {
+                return `Insufficient funds.`
+            }
+                
+        }
+        
+
+    }
+    document.write(Savings.deposit(5000));
+    document.write(Savings.withdraw(200));
+    document.write(Savings.withdraw(7000));
+
+    </script>
+</body>
+</html>

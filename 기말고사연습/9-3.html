@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .container
+    {
+        width: 300px;
+        height: 250px;
+        border: 2px solid orange;
+        margin: 50px;
+        text-align: center;
+      
+    } 
+    #num1, #num2{
+        margin-bottom: 5px;
+        padding: 10px;
+    }  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculator</h2>
+
+        <input id="num1" type="text" placeholder="First number">
+        <input id="num2" type="text" placeholder="Second number"> <br><br>
+
+        <button onclick="calculate('+')">+</button>
+        <button onclick="calculate('-')">-</button>
+        <button onclick="calculate('x')">x</button>
+        <button onclick="calculate('/')">/</button>
+        <button onclick="resetBtn()">reset</button>
+
+        <p id="result">Result : 0</p>
+
+        <script>
+            function calculate(operation) {
+                const num1 = parseFloat(document.getElementById('num1').value); // value로 수정, 숫자 변환
+                const num2 = parseFloat(document.getElementById('num2').value); // value로 수정, 숫자 변환
+                const result = getOperation(num1, num2, operation);
+                const output = document.getElementById('result'); // document. 추가
+                output.innerText = 'Result : ' + result; // innerText로 수정
+              }
+              
+              function resetBtn() { // resetBtn으로 수정
+                document.getElementById('num1').value = '';
+                document.getElementById('num2').value = '';
+                document.getElementById('result').innerText = 'Result : 0';
+              }
+              
+              function getOperation(n, m, op) {
+                switch (op) {
+                  case '+':
+                    return n + m;
+                  case '-':
+                    return n - m;
+                  case 'x':
+                    return n * m;
+                  case '/':
+                    if (m == 0) {
+                      return "Cannot divide by zero";
+                    }
+                    return n / m;
+                }
+              }
+        </script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+      let password; // password 변수를 while 루프 밖으로 이동
+
+const result = (password) => { // 매개변수를 password로 변경
+  if (password === 'fighting') { 
+    return true;
+  } else {
+    return false;
+  }
+};
+
+while (true) {
+  password = prompt('암호는?');
+
+  if (result(password)) {
+    document.write('Pass'); 
+    break;
+  } else {
+    console.log('다시 입력'); // document.write() 대신 console.log() 사용
+  }
+}
+    </script>
+</body>
+</html>

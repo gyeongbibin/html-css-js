@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<script>
+     //객체리터럴
+   const person = {
+        name: "홍길동",
+        hobbies:["독서","음악감상","등산"],
+        info(){
+            return `hello my name is ${this.name} and 내 취미는 ${hobbies.join(",")}야`
+        }
+
+
+    }
+   /* console.log(person.name);
+    document.write(person.name);
+    document.write(person.hobbies);
+    document.write(person.info())*/
+
+    //클래스를 이용한 객체 생성 
+    class Person { 
+        constructor (name,hobby){
+            this.name=name;
+            this.hobbies=hobby;
+        }
+        info(){
+            return `hello my name is ${this.name} and 내 취미는 ${hobbies.join(",")}야`
+        }
+    }
+ const person1 = new Person("김첨지",["독서","음악감상","등산"]);
+
+        document.write(person1.info());
+
+
+     //object create 를 활용한 객체생성   
+     const prototpyePerson = {
+        info(){
+            return `hello my name is ${this.name} and 내 취미는 ${this.hobbies.join(",")}야`
+        }
+     };
+
+     const person2 = Object.create(prototpyePerson);
+
+</script>
+</body>
+</html>

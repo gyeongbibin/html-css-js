@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list"></div>
+    <button id="addItem">아이템추가</button>
+    <button id="removeItem">마지막 아이템제거</button>
+
+    <script>
+        const list = document.getElementById("list");
+        document.getElementById("addItem").addEventListener("click", ()=>{
+            const newItem = document.createElement("div");
+            newItem.textContent="새로운아이템";
+            list.appendChild(newItem);
+        });
+
+        document.getElementById("removeItem").addEventListener("click", ()=>{
+            if(list.lastChild) list.removeChild(list.lastChild);
+        });
+
+    </script>
+
+</body>
+</html>

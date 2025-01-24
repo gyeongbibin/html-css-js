@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+
+}
+.container{
+    width: 500px;
+    margin: 100px auto;
+    background: skyblue;
+    border: 2px solid orange;
+    border-radius: 10px;
+
+}
+.choices{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0px;
+}
+.choice{
+    padding : 10px 20px;
+    font-size: 15px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition : background-color 0.3s;
+}
+.choice:hover{
+    background-color: darkblue;
+}
+.result{
+    margin-top: 20px ;
+}
+.result p, .result h2{
+    margin: 10px 0px;
+}
+#winner span{
+    font-weight: bold;
+    color: darkblue;
+}

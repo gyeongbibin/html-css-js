@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contentBox{
+            width: 200px;
+            height: 100px;
+            padding: 20px; /*width 240 height 140px*/
+            /* box-sizing: content-box; */
+            border : 5px solid blue; /*width 250 height 150px*/
+            background-color: lightblue;
+        }
+
+        .borderBox{
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            box-sizing: border-box;
+            border : 5px solid red;
+            background-color: lightcoral;
+            /*width : 200-(20*2+5*2) 
+            height : 100 - (20*2+5*2) 
+            전체크기는 200 x 100 고정*/
+        }
+    </style>
+</head>
+<body>
+    <div class="contentBox">
+        Content-box
+    </div>
+
+    <div class="borderBox">
+        Border-box
+
+    </div>
+    
+</body>
+</html>

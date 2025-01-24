@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  #colorBox {
+    width: 500px;
+    height: 1000px;
+    background-color: orange;
+  }
+</style>
+</head>
+<body>
+
+<div id="colorBox"></div>
+
+<script>
+  const colorBox = document.getElementById("colorBox");
+
+
+  const changeColor = () => {
+    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+    colorBox.style.backgroundColor = randomColor;
+  };
+
+  
+  const intervalId = setInterval(changeColor, 5000);
+
+  setTimeout(  ( ) => { clearInterval(intervalId)},15000);
+
+
+</script>
+
+</body>
+</html>

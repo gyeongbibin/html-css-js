@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square{
+            border: solid 2px orange;
+            width: 500px;
+            height: 200px;
+            margin: 50px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .input{
+            padding: 10px;
+        }
+        #btn{
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="square">
+        <h2>단어 길이 필터링</h2>
+        <p>쉼표(,)로 구분하여 단어들을 입력하세요 :</p>
+
+        <input class="input" type="text" placeholder="예:dog, study, beautiful등" >
+        <button id="btn" onclick="extract()">필터링</button>
+        <p id="result">결과</p>
+
+    </div>
+
+    <script>
+
+
+        function extract(){
+        //입력 필드에서 값 가져오기
+        const input = document.querySelector('input').value;
+        //입력값을 ,를 중심으로 자르고 공백을 제거해서 배열로 반환.
+        const wordArray = input.split(',').map( word => word.trim());
+        //길이가 5이상인 단어만 필터링
+        const filterWords = wordArray.filter(word => word.length>=5);
+        //결과를 화면에 표시
+        const resultDiv = document.getElementById('result');
+        if(filterWords.length>0){
+            resultDiv.innerText = `길이가 5자 이상인 단어 : \n ${filterWords.join('\n')}`;
+        }
+        else{
+            resultDiv.innerText = '없습니다.';
+        }
+        
+        }
+
+        
+
+    </script>
+</body>
+</html>

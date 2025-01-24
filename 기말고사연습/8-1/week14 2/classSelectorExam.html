@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="example">
+        <div class="child">item1</div>
+        <div class="child">item2</div>
+    </div>
+    <div class="example">
+        <p>item3</p>
+    </div>
+    
+    <script>
+        
+      /*   const elements = document.getElementsByClassName("example");
+         for(const element of elements){
+             element.style.color = "red";
+         }
+*/
+
+    
+         const elements2 = document.getElementsByClassName("example > child");
+         for(const element of elements2){
+             element.style.color = "blue";
+         }
+
+
+       
+     /*   const element3 = document.querySelectorAll(".example>div");
+        for(const element of element3){
+            element.style.color = "green";
+        }*/
+
+
+    </script>
+</body>
+</html>

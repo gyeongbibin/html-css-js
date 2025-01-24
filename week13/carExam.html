@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            
+        }
+        
+        car.Make = prompt("제조사를 입력하세요");
+        car.Model = prompt("모델을 입력하세요");
+        car.Year = prompt("연도를 입력하세요");
+        car.getInfo= function(){
+            return `Make: ${this.Make}, Model: ${this.Model} Year : ${this.Year}`
+
+        }
+
+        document.write(car.getInfo())
+    </script>
+</body>
+</html>

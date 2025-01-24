@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 200px;
+            border: 1px solid orange;
+            flex-direction: column;
+            text-align: center;
+
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <br>
+        <input id="num1" type="text" placeholder="First number"> <br> <br>
+        <input id="num2" type="text" placeholder="Second number"> <br>
+         <br><button class="btn" onclick="sumScore()">합계 계산</button>
+         <p class="result"> Result : 0</p>
+        
+    </div>
+
+    <script>
+        function sumScore(){
+            const num1 = Number(document.querySelector("#num1").value);
+            const num2 = Number(document.querySelector("#num2").value);
+        const sum = num1 + num2;
+        const result = document.querySelector(".result").innerHTML = (`Result : ${sum}`);
+        
+    }
+
+    </script>
+</body>
+</html>

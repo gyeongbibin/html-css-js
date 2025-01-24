@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const parent = {
+            greet : function(){
+                document.write('hello');
+            }
+        };
+    const Child =    Object.create(parent); 
+    Child.name = ' 홍길동 '; 
+    document.write(Child.name);
+    document.write()
+// 객체의 생성 방법 1,2 번만 시험에 낸다 
+    
+    </script>
+</body>
+</html>

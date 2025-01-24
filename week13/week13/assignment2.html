@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var input = prompt("input make, model, year").split(",");
+
+        const car = {
+            getinfo(){
+                this.make = input[0];
+                this.model = input[1];
+                this.year = input[2];
+                return `Make : [${this.make}], Model : [${this.model}], Year : [${this.year}]`
+            }
+        }
+        
+        console.log(car.getinfo());
+        document.write(car.getinfo());
+
+    </script>
+    
+</body>
+</html>

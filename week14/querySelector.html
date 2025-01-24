@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">Hello World</div>
+    <div class="example">first</div>
+    <div class="example">second</div>
+    <p>Happy</p>
+    <div class="example">
+        <p class="text">
+            text1
+        </p>
+    </div>
+
+    <div class="example">
+        <p class="text">text2</p>
+    </div>
+
+    <script>
+        const element = document.querySelector("#myDiv");
+        document.write(element.textContent + "<hr>");
+
+        const element2 = document.querySelector(".example");
+        document.write(element2.textContent + "<hr>");
+
+
+        const element3 = document.querySelector("p");
+        document.write(element3.textContent + "<hr>");
+
+
+
+        const element4 = document.querySelector(".example  .text");
+        document.write(element4.textContent + "<hr>");
+
+        const element5 = document.querySelector(".text");
+        document.write(element5.textContent + "<hr>");
+
+
+
+    
+    </script>
+</body>
+</html>

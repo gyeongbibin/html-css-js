@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// min max 출력
+    function getNumber (numbers){
+        const min = Math.min(...numbers);
+        const max = Math.max(...numbers);
+        return [min, max];
+
+    }
+
+    const [min,max] =getNumber([2,4,10,2,1]);
+    
+    function user() {
+        return{
+            name:"홍길동",
+            age:30 , 
+            loacation: "서울"
+        };
+    }
+    const userinfo = user()
+    
+
+    </script>
+</body>
+</html>

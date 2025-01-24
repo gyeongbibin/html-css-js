@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    const number=[1,2,3,4];
+    //map( ): 배열의 각 요소에 대해 제공된 함수를 호출한 결과를 모아 새로운 배열을 반환
+    let newArray = number.map(n => n*3);
+    //document.write(newArray)
+    //filter(); 제공된 함수에서 조건으로 필터함 
+  let evenNumber=  number.filter(n=> n%2==0);
+  //document.write(evenNumber)
+        const number2 = [3,2,5,6];
+    //sort 정렬 
+    let sortnumber =   number2.sort();
+    //document.write(sortnumber)
+    //join() : 배열의 모든 요소를 문자열로 결합하여 반환
+    let joinNumber  =      number2.join('와')
+    //document.write(joinNumber)
+    //split : 문자열을 지정한 구분자를 통해 자름
+    let splitNumber =joinNumber.split('와');
+    document.write(splitNumber)
+    //trim : 문자열의 양끝의 공백을 제거 
+    const st = '   hello  ';
+    document.write(st.trim());
+    const newArray2 = combined.split('와').map(word => word.trim());
+    document.write(newArray2)
+    </script>
+</body>
+</html>

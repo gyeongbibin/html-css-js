@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행지 추천</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: right;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        main {
+            display: flex;
+        }
+        aside {
+            width: 200px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+        aside a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            flex: 1;
+            padding: 20px;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .thumbnails {
+            display: flex;
+            justify-content: space-between;
+        }
+        .thumbnails img {
+            width: 23%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">login</a> |
+            <a href="#">회원가입</a> |
+            <a href="#">방명록</a>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <h2>여행지</h2>
+            <ul>
+                <li><a href="#">+ 제주도</a></li>
+                <li><a href="#">+ 경상도</a></li>
+                <li><a href="#">+ 전라도</a></li>
+                <li><a href="#">+ 충청도</a></li>
+                <li><a href="#">+ 울릉도</a></li>
+            </ul>
+        </aside>
+        <section>
+            <h2>제주도</h2>
+            <img src="jeju_main.jpg" alt="제주도 메인 이미지">
+            <div class="thumbnails">
+                <a href="#"><img src="jeju_1.jpg" alt="제주도 이미지 1"></a>
+                <a href="#"><img src="jeju_2.jpg" alt="제주도 이미지 2"></a>
+                <a href="#"><img src="jeju_3.jpg" alt="제주도 이미지 3"></a>
+                <a href="#"><img src="jeju_4.jpg" alt="제주도 이미지 4"></a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

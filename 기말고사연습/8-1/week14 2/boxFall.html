@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fallingBox{
+            width: 50px;
+            height: 50px;
+            background-color: skyblue;
+            position : absolute;
+            /* absolute relative 알아둘것*/
+            top: 0;
+            left: 50%;
+            transform: translateX(-50);
+            animation : fall 3s linear infinite;
+        }
+
+        @keyframes fall{
+            /*trnasform은 안낸다. transition, animation은 알아둬라*/
+            0%{
+                transform: translateY(0) rotate(0deg);
+            }
+            100%{
+                transform: translateY(100vh) rotate(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="fallingBox"></div>
+    
+
+    <script>
+        function getRandomColor(){
+            const r = Math.floor(Math.random()*256);
+            const g = Math.floor(Math.random()*256);
+            const b = Math.floor(Math.random()*256);
+            return `rgb(${r},${g},${b})`;
+        }
+        
+        const fallingBox = document.querySelector(".fallingBox");
+
+        setInterval(()=>{
+            fallingBox.style.backgroundColor = getRandomColor();
+        }, 200);
+
+
+
+    </script>
+
+    
+</body>
+</html>

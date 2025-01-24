@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* input:focus+label{
+            color: blue;
+        }
+
+        input:checked+label{
+            color: red;
+        } */
+
+        input:disabled+label{
+            color: gray;
+        }
+
+        input:enabled+label{
+            background:yellow;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <input type="checkbox" id="ch" name="hobbys" value="1" disabled> 
+    <label for="ch">독서</label><br>
+    <input type="checkbox" id="ch2" name="hobbys" value="2" checked> 
+    <label for="ch2">음악감상</label><br>
+    <input type="checkbox" id="ch3" name="hobbys" value="3"> 
+    <label for="ch3">운동</label><br>
+
+
+</body>
+</html>

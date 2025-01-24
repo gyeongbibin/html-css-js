@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0px;
+    background-color: white;
+}
+.colorbutton{
+    padding: 15px 20px;
+    border-radius: 15px;
+    background-color: skyblue;
+    transition: background-color 03s ease;
+
+}
+
+    
+
+    </style>
+
+
+
+</head>
+<script>
+    function changeColor(){
+       const red = Math.floor( Math.random()*256);
+       const green = Math.floor( Math.random()*256);
+
+       const blue = Math.floor( Math.random()*256);
+       const randomColor = `rgb(${red}, ${green}, ${blue})`;
+       //버튼 색상 변경
+       document.querySelector('.colorbutton').style.backgroundColor=randomColor;
+
+
+    }
+</script>
+<body>
+    <button class="colorbutton" onclick="changeColor()">색상변경</button>
+
+
+
+  
+</body>
+</html>

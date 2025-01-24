@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            age:20,
+            nickname:['tiger','rabbit'],
+            hobbys :{
+                first:'music',
+                second:'soccer'
+            },
+            outputHello : function(){
+                return 'hello';
+            }
+
+        };
+        //document.write(person.nickname);
+       //document.write(person.age);
+        //document.write(person.hobbys.first);
+        person.nickname[2] = 'elephant';
+        //document.write(person.nickname);
+        //document.write(person['outputHello']())
+        //person = { name2:'kim'};
+        //document.write(person.name2);
+        const key = Object.keys(person);
+        const values = Object.values(person);
+        const entries = Object.entries(person);
+        document.write(entries)
+        /*for ( let key in person){
+            if(person.hasOwnProperty(key)){
+                document.write(`${key}: ${person[key]}   `)
+            }
+        }*/
+    </script>
+</body>
+</html>

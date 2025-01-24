@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            margin: auto;
+            margin-top: 100px;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>    
+
+     
+function changeBackgroundColor() {
+    const box = document.querySelector(".container"); 
+    const red = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const randomColor = `rgb(${red}, ${blue}, ${green})`; // rgb() 형식 주의
+    box.style.backgroundColor = randomColor;
+  }
+     const intervalId = setInterval(changeBackgroundColor,5000);
+
+     setTimeout(() => {clearInterval(intervalId)},15000)
+
+
+    </script>
+</body>
+</html>

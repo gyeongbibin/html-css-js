@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object.create를 활용한 객체 생성
+        //객체 생성 방식이 여러가지인 이유는 상황에 맞게 유동적으로 활용하기 위함.
+
+        const Person={
+            info(){
+                return `hello, my name is ${this.name} and my hobbies are ${this.hobbies.join(",")}.`
+            }
+        };
+
+        const person2 = Object.create(Person);
+        person2.name = "Hong";
+        person2.hobbies = ["music", "soccer", "movie"];
+        
+        console.log(person2.name);
+        console.log(person2.hobbies);
+        console.log(person2.info());
+
+
+    </script>
+    
+</body>
+</html>

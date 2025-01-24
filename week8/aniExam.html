@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Example</title>
+  <style>
+.animation-container {
+    text-align: center;
+}
+
+.animated-text {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+    animation: shrinkText 5s ease-in-out 3; /* 5초 동안, 3번 반복 */
+}
+
+/* 애니메이션 정의 */
+@keyframes shrinkText {
+    0% {
+        font-size: 500%;
+        color: red;
+        font-weight: bold;
+    }
+    100% {
+        font-size: 100%;
+        color: blue;
+    }
+}
+
+  </style>
+</head>
+<body>
+    <div class="animation-container">
+        <div class="animated-text">BOMB!!</div>
+    </div>
+</body>
+</html>

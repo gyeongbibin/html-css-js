@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            font-size: 50px
+        }
+        p:hover{
+            color: brown;
+        }
+        ol>li:first-child{
+            color:blueviolet;
+        }
+        ol>li:nth-last-child(1){
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>여행 버킷리스트</p>
+    <hr style="border: 3px solid;">
+    <ul>
+        <li>미국,캐나다</li>
+        <li>아시아</Li>
+            <ol>
+               <li>일본</li> 
+               <li>홍콩</li> 
+               <li>중국</li> 
+               <li>베트남</li> 
+            </ol>
+        <li>유럽</li>
+            <ol type="A">
+                <li>서유럽</li>
+                <li>동유럽</li>
+                <li>북유럽</li>
+            </ol>    
+    </ul>
+</body>
+</html>

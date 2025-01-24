@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block-element{
+            background-color: lightblue;
+            width: 300px;
+            height: 100px;
+            margin : 20px; 
+            padding: 15px;
+        }
+
+        .inline-element{
+            color: red;
+            background-color: yellow;
+            width: 200px;
+            height: 200px; /*인라인 요소이기때문에 width, height가 적용되지 않는다.*/
+            margin: 20px;
+            padding: 20px; /*margin과 padding은 좌우에만 적용된다.*/
+        }
+        .inline-block{
+            width: 250px;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 10px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="block-element">box1</div>    
+    <div class="block-element">box2</div>
+
+    <p>inline<span class="inline-element">inline-element1</span>exam</p>
+    <p>inline<span class="inline-element">inline-element2</span>exam</p>
+
+    <button class="inline-block">inline-block1</button>
+    <button class="inline-block">inline-block2</button>
+    <button class="inline-block">inline-block3</button>
+
+    
+    
+</body>
+</html>
